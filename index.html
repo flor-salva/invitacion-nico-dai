@@ -30,40 +30,57 @@
     <style>
         /* Estilos extras para el botón de WhatsApp */
         .whatsapp-btn {
-            display: inline-flex;
+            display: inline-flex !important;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            background-color: #25D366;
+            background-color: #25D366 !important;
             color: #fff !important;
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
+            padding: 18px 36px !important;
+            border-radius: 50px !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            text-decoration: none !important;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            border: none;
-            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.45);
+            border: none !important;
+            cursor: pointer !important;
+            position: relative;
+            z-index: 20;
+            pointer-events: auto !important;
         }
-        .whatsapp-btn:hover {
-            background-color: #1ebe57;
+        .whatsapp-btn:hover,
+        .whatsapp-btn:focus,
+        .whatsapp-btn:active {
+            background-color: #1ebe57 !important;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
             color: #fff !important;
-            text-decoration: none;
+            text-decoration: none !important;
         }
         .whatsapp-btn i {
             font-size: 24px;
+            color: #fff !important;
         }
         .rsvp-whatsapp-box {
             text-align: center;
             padding: 40px 20px;
+            position: relative;
+            z-index: 10;
         }
         .rsvp-whatsapp-box p {
             margin-bottom: 25px;
             font-size: 16px;
             color: #666;
+        }
+        /* Forzar que el botón sea clickeable aunque el template intente bloquearlo */
+        .rspv-form a.whatsapp-btn,
+        .rsvp-section a.whatsapp-btn,
+        .rsvp-section .whatsapp-btn {
+            pointer-events: auto !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            cursor: pointer !important;
         }
         .alias-box {
             background: #f8f5f0;
