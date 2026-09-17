@@ -109,6 +109,37 @@
             object-position: center;
             display: block;
         }
+
+        /* Imagen de fondo para la sección de la frase */
+        .wishes-section {
+            background: url('assets/images/wishes-bg.jpeg') center center / cover no-repeat !important;
+            background-color: #f5f0e9;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .wishes-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.55); /* velo suave para que se lea el texto */
+            z-index: 1;
+        }
+        .wishes-section .container {
+            position: relative;
+            z-index: 2;
+        }
+        .wishes-section .text {
+            color: #333;
+        }
+        .wishes-section .text p {
+            font-size: 22px;
+            font-style: italic;
+        }
     </style>
 
 </head>
@@ -271,6 +302,31 @@
         <!-- end wedding-location-section -->
 
 
+        <!-- start dress-code-section -->
+        <section class="section-padding" id="dresscode" style="background-color: #f9f6f2;">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-8 col-lg-offset-2 text-center">
+                        <div class="section-title">
+                            <h2>✨ Código de vestimenta</h2>
+                        </div>
+                        <div style="max-width: 560px; margin: 0 auto; font-size: 17px; line-height: 1.7; color: #555;">
+                            <p style="margin-bottom: 18px; font-size: 20px; font-weight: 600; color: #333;">Elegante</p>
+                            <p style="margin-bottom: 12px;">
+                                Reservamos el blanco, marfil, champán y tonos pastel para la novia.<br>
+                                También pedimos evitar el beige y los colores muy claros.
+                            </p>
+                            <p style="margin-top: 22px; font-weight: 500; color: #444;">
+                                Evento exclusivo para adultos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end dress-code-section -->
+
+
         <!-- start wishes-section -->
         <section class="wishes-section">
             <div class="container">
@@ -311,6 +367,11 @@
                                     <img src="assets/images/nico-dai/hero.jpeg" alt="Nico y Dai">
                                 </a>
                             </div>
+                            <div class="grid">
+                                <a href="assets/images/nico-dai/foto-3.jpeg" class="fancybox" data-fancybox-group="gall-1">
+                                    <img src="assets/images/nico-dai/foto-3.jpeg" alt="Nico y Dai">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -319,35 +380,8 @@
         <!-- end gallery-section -->
 
 
-        <!-- start rsvp-section -->
-        <section class="rsvp-section section-padding" id="rsvp">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <div class="rspv-form">
-                            <h3>¿Vas a venir?</h3>
-                            <p>Por favor confirmá tu asistencia antes del 22 de Octubre de 2026</p>
-                            
-                            <div class="rsvp-whatsapp-box">
-                                <p>Tocá el botón y envianos un mensajito por WhatsApp para confirmar.</p>
-                                
-                                <a href="https://wa.me/5493764152860?text=Hola%21%20Confirmo%20mi%20asistencia%20al%20casamiento%20de%20Nico%20y%20Dai%20%F0%9F%92%8D%0A%0ANombre%3A%20%0ACantidad%20de%20personas%3A%20%0AVoy%20a%3A%20(Ceremonia%20%2F%20Fiesta%20%2F%20Ambos)%0AMensaje%3A%20" 
-                                   target="_blank" 
-                                   rel="noopener noreferrer"
-                                   style="display:inline-flex; align-items:center; justify-content:center; gap:10px; background-color:#25D366; color:#ffffff; padding:18px 36px; border-radius:50px; font-size:18px; font-weight:600; text-decoration:none; box-shadow:0 4px 15px rgba(37,211,102,0.45); border:none; cursor:pointer; position:relative; z-index:50;">
-                                    <span style="font-size:22px;">📱</span> Confirmar por WhatsApp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end container -->
-        </section>
-        <!-- end rsvp-section -->
-
-
         <!-- start gift-registry-section -->
-        <section class="gift-registry-section section-padding p-t-0">
+        <section class="gift-registry-section section-padding" style="background-color: #f9f6f2;">
             <div class="container">
                 <div class="row">
                     <div class="col col-lg-8 col-lg-offset-2 text-center">
@@ -363,6 +397,29 @@
             </div> <!-- end contianer -->
         </section>
         <!-- end gift-registry-section -->
+
+
+        <!-- start rsvp-section -->
+        <section class="rsvp-section section-padding" id="rsvp">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12 text-center">
+                        <h3 style="margin-bottom: 15px;">¿Vas a venir?</h3>
+                        <p style="margin-bottom: 30px;">Por favor confirmá tu asistencia antes del 22 de Octubre de 2026</p>
+                        
+                        <p style="margin-bottom: 25px; color:#666;">Tocá el botón y envianos un mensajito por WhatsApp para confirmar.</p>
+                        
+                        <a href="https://wa.me/5493764152860?text=Hola%21%20Confirmo%20mi%20asistencia%20al%20casamiento%20de%20Nico%20y%20Dai%20%F0%9F%92%8D%0A%0ANombre%3A%20%0ACantidad%20de%20personas%3A%20%0AVoy%20a%3A%20(Ceremonia%20%2F%20Fiesta%20%2F%20Ambos)%0AMensaje%3A%20" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="display:inline-flex !important; align-items:center; justify-content:center; gap:12px; background-color:#25D366 !important; color:#ffffff !important; padding:18px 40px; border-radius:50px; font-size:18px; font-weight:600; text-decoration:none !important; box-shadow:0 4px 18px rgba(37,211,102,0.5); border:none; cursor:pointer !important; position:relative; z-index:999;">
+                            <span style="font-size:24px;">📱</span> Confirmar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end rsvp-section -->
 
 
         <!-- start footer-section -->
